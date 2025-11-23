@@ -1,0 +1,31 @@
+.ShowTime{
+    position: relative;
+    margin: 0px;
+    height: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.ShowTime progress{
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    height: 100%;
+    appearance: none;
+    background-color: rgb(167, 112, 11);
+}
+
+.ShowTime progress::-moz-progress-bar{
+  background-color: orange;
+}
+
+.ShowTime progress::-webkit-progress-bar{
+  background-color: orange;
+}
+
+.ShowTime progress::-webkit-progress-value{
+  background-color: rgb(167, 112, 11);
+}

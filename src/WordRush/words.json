@@ -1,0 +1,94 @@
+{
+  "themes": {
+    "Hamburguers": [
+      {"phasers": "I want a double bacon cheeseburger and a cola"},
+      {"phasers": "I want a chicken burger with double bacon mayonnaise and a pepsi"},
+      {"phasers": "I’d like a spicy beef burger with jalapeños and extra cheese"},
+      {"phasers": "Can I have a veggie burger with avocado and sweet potato fries?"},
+      {"phasers": "Give me a BBQ bacon burger with caramelized onions"},
+      {"phasers": "I'd like a classic cheeseburger combo with lemonade"},
+      {"phasers": "I want a mushroom swiss burger with a side of onion rings"},
+      {"phasers": "I'd like a crispy fish burger with tartar sauce"},
+      {"phasers": "Can you prepare me a double cheeseburger with extra pickles and no onions?"},
+      {"phasers": "I'd like a gourmet truffle burger with parmesan fries"}
+    ],
+
+    "Hotdog": [
+      {"phasers": "I want a classic hotdog with fries."},
+      {"phasers": "I want a hot dog with mushrooms and house sauce"},
+      {"phasers": "Give me a chili cheese dog with nachos"},
+      {"phasers": "I’d like a New York-style hotdog with mustard and onions"},
+      {"phasers": "Can I get a hotdog with sauerkraut and spicy mustard?"},
+      {"phasers": "I want a bacon-wrapped hotdog with jalapeños"},
+      {"phasers": "I'd like a vegan hotdog with avocado and tomato"},
+      {"phasers": "Give me a hotdog topped with grilled pineapple and teriyaki sauce"},
+      {"phasers": "I want a Chicago-style hotdog with all the toppings"},
+      {"phasers": "Please prepare a premium sausage hotdog with BBQ sauce"}
+    ],
+
+    "Pizza": [
+      {"phasers": "I want a pepperoni pizza with extra cheese"},
+      {"phasers": "Give me a margherita pizza with fresh basil"},
+      {"phasers": "I'd like a four-cheese pizza with garlic crust"},
+      {"phasers": "Can I order a Hawaiian pizza with double pineapple?"},
+      {"phasers": "I want a veggie pizza with olives and mushrooms"},
+      {"phasers": "Give me a BBQ chicken pizza with red onions"},
+      {"phasers": "I'd like a spicy pepper pizza with chili flakes"},
+      {"phasers": "Please prepare me a meat lovers pizza"},
+      {"phasers": "I want a white pizza with ricotta and spinach"},
+      {"phasers": "I'd like a thin-crust pizza with pesto and tomatoes"}
+    ],
+
+    "Pasta": [
+      {"phasers": "I want a carbonara pasta with extra bacon"},
+      {"phasers": "Give me a spaghetti bolognese with parmesan"},
+      {"phasers": "I'd like a creamy alfredo pasta with chicken"},
+      {"phasers": "I want a pesto pasta with cherry tomatoes"},
+      {"phasers": "Can I order a seafood pasta with garlic sauce?"},
+      {"phasers": "I'd like a lasagna with extra cheese"},
+      {"phasers": "I want a spicy arrabbiata pasta"},
+      {"phasers": "Give me a mushroom tagliatelle"},
+      {"phasers": "I’d like a truffle pasta with shaved parmesan"},
+      {"phasers": "I want a ravioli filled with ricotta and spinach"}
+    ],
+
+    "Salads": [
+      {"phasers": "I want a caesar salad with grilled chicken"},
+      {"phasers": "Give me a greek salad with feta cheese"},
+      {"phasers": "I'd like a quinoa salad with avocado"},
+      {"phasers": "Can I have a tuna salad with sweet corn?"},
+      {"phasers": "I want a fruit salad with honey yogurt"},
+      {"phasers": "I'd like a caprese salad with balsamic glaze"},
+      {"phasers": "Give me a mixed green salad with walnuts"},
+      {"phasers": "I want a chef salad with ham and cheese"},
+      {"phasers": "I'd like a smoked salmon salad"},
+      {"phasers": "Give me a couscous salad with herbs"}
+    ],
+
+    "Smoothies": [
+      {"phasers": "I want a strawberry banana smoothie"},
+      {"phasers": "Give me a mango smoothie with coconut milk"},
+      {"phasers": "I'd like a green detox smoothie"},
+      {"phasers": "Can I have a blueberry protein smoothie?"},
+      {"phasers": "I want a chocolate peanut butter smoothie"},
+      {"phasers": "Give me a tropical smoothie with pineapple"},
+      {"phasers": "I'd like an orange carrot smoothie"},
+      {"phasers": "I want a smoothie bowl with granola"},
+      {"phasers": "Give me an açai smoothie with banana"},
+      {"phasers": "I'd like a watermelon mint smoothie"}
+    ],
+
+    "IceCream": [
+      {"phasers": "I want a chocolate ice cream cone"},
+      {"phasers": "Give me a vanilla ice cream sundae"},
+      {"phasers": "I'd like a strawberry milkshake"},
+      {"phasers": "Can I have a caramel swirl ice cream?"},
+      {"phasers": "I want a pistachio gelato"},
+      {"phasers": "Give me a cookies and cream ice cream"},
+      {"phasers": "I'd like a banana split"},
+      {"phasers": "I want a mango sorbet"},
+      {"phasers": "Give me a mint chocolate chip ice cream"},
+      {"phasers": "I'd like a triple scoop waffle cone"}
+    ]
+  }
+}

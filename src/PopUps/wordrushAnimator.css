@@ -1,0 +1,47 @@
+.ContainerWordsDrop{
+    position: relative;
+    width: 80%;
+    aspect-ratio: 25/8;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.2);
+    overflow: hidden;
+    color:black;
+    user-select: none;
+}
+
+.ExampleWord1,.ExampleWord2,.ExampleWord3{
+    position: absolute;
+    font-size: 1.2rem;
+}
+
+.ExampleWord1{
+    right: 5%;
+    animation: WordsDrop 3s infinite ease-in-out;
+}
+
+.ExampleWord2{
+    top: -30%;
+    right: 42%;
+    animation: WordsDrop 2.3s 1s infinite ease-in-out;
+}
+
+.ExampleWord3{
+    right: 68%;
+    top: -30%;
+    animation: WordsDrop 3s 1.5s infinite ease-in-out;
+}
+
+@keyframes WordsDrop {
+    0% {top: -10%}
+    100% {top: 110%}
+}
+
+@media (min-aspect-ratio: 1) {
+    
+}
+
+@media (max-aspect-ratio: 1.1) {
+    .ContainerWordsDrop{
+        aspect-ratio: 18/10;
+    }
+}

@@ -1,0 +1,92 @@
+.WordsContainer{
+    display: flex;
+    width: 100%;
+    height: 100dvh;
+}
+
+.NoteBookContainer{
+    width: 45%;
+    height: 85dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.RingsContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 80px;
+    transform: translateY(40px);
+    gap: 10px;
+}
+
+.Ring{
+    height: 100%;
+    aspect-ratio: 9/25;
+    background-color: rgb(115, 115, 115);
+    margin: auto;
+    border-radius: 20px;
+}
+
+.Page{
+    width: 70%;
+    height: 55%;
+    background-color: white;
+    border-radius: 8px;
+    padding: 5%;
+    padding-top: 10%;
+}
+
+.Page span{
+    color: black;
+}
+
+.WordCascade{
+    height: 100dvh;
+    width: 55%;
+    overflow-y: hidden;
+    background-color: rgba(0, 0, 0, 0.2);
+    user-select: none;
+}
+
+.WordCard{
+    position: absolute;
+    animation: downAnimation 7.5s linear forwards;
+    font-size: 2rem;
+}
+
+.PlayerInputContainer{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+}
+
+.PlayerInput{
+    position: relative;
+    width: 80%;
+    padding: 5px;
+    font-size: 4rem;
+    background-color: rgb(219, 182, 136);
+    border: none;
+    border-radius: 10px;
+}
+
+.PlayerInput::placeholder{
+    color: rgba(0, 0, 0, 0.2);
+}
+
+@keyframes downAnimation {
+    0%      { top: -30dvh }
+    100%    { top: 110dvh; }
+}
+
+@media (max-aspect-ratio: 0.95) {
+    .Page{
+        padding-top: 20%;
+    }
+}
