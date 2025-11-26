@@ -4,6 +4,7 @@ import { TimerShow } from "../TimerShow";
 import { Cheese, HamburgerBreadButtom, HamburgerBreadTop, Hamburguer } from "./MapBlock";
 import { HAMBURGUER, CHEESE } from "./CheckWin";
 import { PopupRolesMatchGame, PopupGameEnd } from "../PopUps/popup";
+import { UpdateMatchGameScore } from "../db/firebase";
 var RandomNewMinMeets = 0
 
 //Images to Load in start time
@@ -58,7 +59,10 @@ export function BoardPage(){
     
     setTimeout(() => {if (!popupState) SetClok(clock - 0.050)},50)
     if (popupState) return ( <PopupRolesMatchGame setState={setState}/> )
-    if (clock <= 0) return ( <PopupGameEnd/> )
+    if (clock <= 0) {
+        UpdateMatchGameScore(score)
+        return ( <PopupGameEnd/> )
+    }
     else return (
         <div className="GamePage">
             <TimerShow startTime={120} currentTime={clock.toFixed(2)}/>
