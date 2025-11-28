@@ -1,14 +1,14 @@
-export function MiniGameDataObject(Name,currentScore){
+export function MiniGameDataObject(Name){
     const MiniGame={
         Name: Name,
-        BestScore: currentScore,
-        Scores: [currentScore]
+        BestScore: 0,
+        Scores: []
     }
     return MiniGame
 }
 
 export function UpdateMiniGameDataObject(MiniGameDataObject,score){
-    const newScores = [...MiniGameDataObject.Scores,score]
+    const newScores = (MiniGameDataObject.Scores === undefined) ? [score] :  [...MiniGameDataObject.Scores,score]
     const MiniGame = {
         Name: MiniGameDataObject.Name,
         BestScore: Math.max(...newScores),

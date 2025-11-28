@@ -27,8 +27,8 @@ export function CreateUserDataObject(name, password){
     const user = {
         name: name,
         password: password,
-        wordrush: WordRushGameObject(0),
-        match: MatchGameDataObject(0)
+        wordrush: WordRushGameObject(),
+        match: MatchGameDataObject()
     }
     return user
 }
@@ -72,10 +72,26 @@ export async function UpdateMatchGameScore(score){
         const cookieUser = Cookies.get("user")
         if (cookieUser === undefined || cookieUser === "") return false
         const userSave = JSON.parse(cookieUser)
-        const user = await getUser(userSave)
+        const user = await getUser(userSave.name, userSave.password)
         const userRef = ref(db,"users/" + user.id + "/match")
-        await update(userRef, UpdateMiniGameDataObject(user.wordrush,score))
+        await update(userRef, UpdateMiniGameDataObject(user.match,score))
+        console.log("Update MatchGame Score with success")
         return true
+    } catch(err){
+        console.log({error: err.message})
+        return false
+    }
+}
+
+export async function UpdateWordRushGameScore(score) {
+    try{
+        const cookieUser = Cookies.get("user")
+        if (cookieUser === undefined || cookieUser === "") return false
+        const userSave = JSON.parse(cookieUser)
+        const user = await getUser(userSave.name, userSave.password)
+        const userRef = ref(db,"users/" + user.id + "/wordrush")
+        await update(userRef, UpdateMiniGameDataObject(user.wordrush,score))
+        console.log("Update WordRush Score with success")
     } catch(err){
         console.log({error: err.message})
         return false

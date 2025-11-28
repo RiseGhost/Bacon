@@ -16,13 +16,14 @@ const imagesPaths = [
 ]
 
 export function BoardPage(){
-    const [clock,SetClok] = useState(120)
+    const [clock,SetClok] = useState(20)
     const [score,SetScore] = useState(0)
     const [foods,setFoods] = useState([])
     const [loading,setLoading] = useState(true)
     const [popupState,setState] = useState(true)
     const [meets,setMeets] = useState(0)
     const [minMeets,setMinMeets] = useState(0)
+    const [save, setSave] = useState(false)
     const meetsCollets = foods.filter((x) => x == HAMBURGUER)
 
     useEffect(() => {
@@ -60,7 +61,10 @@ export function BoardPage(){
     setTimeout(() => {if (!popupState) SetClok(clock - 0.050)},50)
     if (popupState) return ( <PopupRolesMatchGame setState={setState}/> )
     if (clock <= 0) {
-        UpdateMatchGameScore(score)
+        if (!save){
+            UpdateMatchGameScore(score)
+            setSave(true)
+        }
         return ( <PopupGameEnd/> )
     }
     else return (

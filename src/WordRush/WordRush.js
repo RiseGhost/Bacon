@@ -4,6 +4,7 @@ import '../App.css'
 import data from './words.json'
 import { WordCard } from './wordCard'
 import { PopupRolesWordRush, PopupGameEnd } from '../PopUps/popup'
+import { UpdateWordRushGameScore } from '../db/firebase'
 let phasers = 0
 let currentPhaser = []
 let themeSelect = ""
@@ -32,6 +33,7 @@ export function WordsContainer(){
     const [updateWords, setUpdateWords] = useState(0)
     const [score, setScore] = useState(0)
     const [finished, setFinished] = useState(false)
+    const [save, setSave] = useState(false)
     const inputRef = useRef(null)
 
     if (themeSelect === "") themeSelect = selectRandomTheme()
@@ -72,7 +74,13 @@ export function WordsContainer(){
     },[playerInput,words])
 
     if (popupState) return <PopupRolesWordRush setState={setPopupState}/>
-    if (finished) return <PopupGameEnd/>
+    if (finished){
+        if (!save){
+            UpdateWordRushGameScore(score)
+            setSave(true)
+        }
+        return <PopupGameEnd/>
+    }
     return (
         <div className='GamePage'>
             <div className='WordsContainer'>
