@@ -10,6 +10,15 @@ let currentPhaser = []
 let themeSelect = ""
 const TimeToDestroyWords = 5600
 
+function WordLostStatus(status, setStatus, word){
+    if (word == undefined) return
+    const length = word.length
+    setStatus(prev => ({
+        ...prev,
+        [String(length)]: (prev[String(length)] || 0) + 1
+    }))
+}
+
 function selectRandomTheme(){
     const obj = Object.keys(data.themes)
     const themeIndex = Math.floor(Math.random() * obj.length)
@@ -34,6 +43,7 @@ export function WordsContainer(){
     const [score, setScore] = useState(0)
     const [finished, setFinished] = useState(false)
     const [save, setSave] = useState(false)
+    const [LostWordStatus, setLostWordStatus] = useState({})
     const inputRef = useRef(null)
 
     if (themeSelect === "") themeSelect = selectRandomTheme()
@@ -58,7 +68,11 @@ export function WordsContainer(){
         }
     ,[popupState])
 
-    useEffect(() => {setWords(words.filter((x) => Date.now() - x.createAt < TimeToDestroyWords))},[updateWords])
+    useEffect(() => {
+        if (words[0] && (Date.now() - words[0].createAt) > TimeToDestroyWords)
+            WordLostStatus(LostWordStatus,setLostWordStatus,words[0].word)
+        setWords(words.filter((x) => Date.now() - x.createAt < TimeToDestroyWords))
+    },[updateWords])
     useEffect(() => {
         if (words.length === 0) return
         const first = words[0]
@@ -76,7 +90,7 @@ export function WordsContainer(){
     if (popupState) return <PopupRolesWordRush setState={setPopupState}/>
     if (finished){
         if (!save){
-            UpdateWordRushGameScore(score)
+            UpdateWordRushGameScore(score,LostWordStatus)
             setSave(true)
         }
         return <PopupGameEnd/>

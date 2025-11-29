@@ -73,7 +73,7 @@ export function LoginPage() {
                         placeholder='password'
                     />
 
-                    <button type="submit">Enviar</button>
+                    <button type="submit">Enter the restaurant</button>
                     <br/>
                 </form>
             </div>

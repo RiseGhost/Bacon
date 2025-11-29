@@ -23,6 +23,7 @@ form{
     padding-left: 30px;
     background-color: black;
     border-radius: 10px;
+    font-size: 2rem;
 }
 
 form input{
@@ -30,5 +31,6 @@ form input{
     background-color: transparent;
     border: 2px solid #F5CBA7;
     border-radius: 8px;
+    font-size: 1.6rem;
     color: white
 }

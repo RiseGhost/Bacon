@@ -83,14 +83,15 @@ export async function UpdateMatchGameScore(score){
     }
 }
 
-export async function UpdateWordRushGameScore(score) {
+export async function UpdateWordRushGameScore(score, LostWordStatus) {
     try{
         const cookieUser = Cookies.get("user")
         if (cookieUser === undefined || cookieUser === "") return false
         const userSave = JSON.parse(cookieUser)
         const user = await getUser(userSave.name, userSave.password)
         const userRef = ref(db,"users/" + user.id + "/wordrush")
-        await update(userRef, UpdateMiniGameDataObject(user.wordrush,score))
+        const data = UpdateMiniGameDataObject(user.wordrush,score,{LostWordStatus: LostWordStatus})
+        await update(userRef, data)
         console.log("Update WordRush Score with success")
     } catch(err){
         console.log({error: err.message})
