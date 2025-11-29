@@ -12,11 +12,12 @@ const imagesPaths = [
     "/public/Images/Pão base.svg",
     "/public/Images/Pão topo.svg",
     "/public/Images/Cheese.svg",
-    "/public/Images/Hamburguer.svg"
+    "/public/Images/Hamburguer.svg",
+    "/public/Images/Burned.svg"
 ]
 
 export function BoardPage(){
-    const [clock,SetClok] = useState(20)
+    const [clock,SetClok] = useState(120)
     const [score,SetScore] = useState(0)
     const [foods,setFoods] = useState([])
     const [loading,setLoading] = useState(true)

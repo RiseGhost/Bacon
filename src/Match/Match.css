@@ -31,6 +31,9 @@
 .BurnedBlock{
     cursor: url("/public/Images/hamburguer.png") 32 32, auto;
     background-color: white;
+    background-image: url("/public/Images/Burned.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .Start{
